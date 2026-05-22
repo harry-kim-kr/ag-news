@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateVersion='1.0.0' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+  <meta content='width=device-width, initial-scale=1' name='viewport'/>
+  <b:include data='blog' name='all-head-content'/>
+  <title><data:blog.pageTitle/></title>
+  <b:skin><![CDATA[
+    :root {
+      --sf-ink: #17201b;
+      --sf-muted: #617067;
+      --sf-line: #d9e2dc;
+      --sf-bg: #f6f8f4;
+      --sf-panel: #ffffff;
+      --sf-accent: #176b48;
+      --sf-accent-2: #c87d2c;
+      --sf-soft: #e7f2eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--sf-bg);
+      color: var(--sf-ink);
+      font-family: Arial, "Noto Sans KR", sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--sf-accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .site-header {
+      border-bottom: 1px solid var(--sf-line);
+      background: var(--sf-panel);
+    }
+
+    .site-header-inner,
+    .site-main,
+    .site-footer-inner {
+      width: min(1080px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .site-header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      min-height: 72px;
+    }
+
+    .site-title {
+      margin: 0;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .site-description {
+      margin: 2px 0 0;
+      color: var(--sf-muted);
+      font-size: 13px;
+    }
+
+    .site-main {
+      padding: 32px 0 48px;
+    }
+
+    .blog-posts,
+    .post-outer {
+      display: grid;
+      gap: 24px;
+    }
+
+    .post,
+    .widget {
+      background: var(--sf-panel);
+      border: 1px solid var(--sf-line);
+      border-radius: 8px;
+      padding: 28px;
+    }
+
+    .post-title {
+      margin: 0 0 16px;
+      font-size: 30px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    .sf-brief {
+      display: grid;
+      gap: 28px;
+    }
+
+    .sf-hero {
+      border-left: 6px solid var(--sf-accent);
+      padding: 8px 0 8px 20px;
+    }
+
+    .sf-kicker,
+    .sf-date,
+    .sf-source,
+    .sf-footer {
+      color: var(--sf-muted);
+      font-size: 13px;
+    }
+
+    .sf-kicker {
+      margin: 0 0 8px;
+      color: var(--sf-accent-2);
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .sf-hero h1 {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    .sf-date {
+      margin: 10px 0 0;
+    }
+
+    .sf-summary {
+      margin: 18px 0 0;
+      font-size: 18px;
+    }
+
+    .sf-section {
+      border-top: 1px solid var(--sf-line);
+      padding-top: 22px;
+    }
+
+    .sf-section h2 {
+      margin: 0 0 14px;
+      font-size: 22px;
+      letter-spacing: 0;
+    }
+
+    .sf-insights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+
+    .sf-insight {
+      background: var(--sf-soft);
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .sf-insight p,
+    .sf-news-card p {
+      margin: 8px 0 0;
+    }
+
+    .sf-news-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .sf-news-card {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      border: 1px solid var(--sf-line);
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .sf-news-card h3 {
+      margin: 4px 0 0;
+      font-size: 18px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    .sf-news-card time {
+      color: var(--sf-muted);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--sf-line);
+      color: var(--sf-muted);
+      background: var(--sf-panel);
+      padding: 24px 0;
+      font-size: 13px;
+    }
+
+    @media (max-width: 680px) {
+      .site-header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        padding: 16px 0;
+      }
+
+      .post,
+      .widget {
+        padding: 20px;
+      }
+
+      .post-title,
+      .sf-hero h1 {
+        font-size: 26px;
+      }
+
+      .sf-news-card {
+        grid-template-columns: 1fr;
+      }
+    }
+  ]]></b:skin>
+</head>
+<body>
+  <header class='site-header'>
+    <div class='site-header-inner'>
+      <div>
+        <h1 class='site-title'><a expr:href='data:blog.homepageUrl'><data:blog.title/></a></h1>
+        <p class='site-description'><data:blog.description/></p>
+      </div>
+    </div>
+  </header>
+
+  <main class='site-main'>
+    <b:section class='main' id='main' showaddelement='true'>
+      <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='2' visible='true'>
+        <b:widget-settings>
+          <b:widget-setting name='showDateHeader'>false</b:widget-setting>
+          <b:widget-setting name='showShareButtons'>true</b:widget-setting>
+          <b:widget-setting name='showCommentLink'>true</b:widget-setting>
+          <b:widget-setting name='showAuthor'>false</b:widget-setting>
+          <b:widget-setting name='showLabels'>true</b:widget-setting>
+        </b:widget-settings>
+        <b:includable id='main'>
+          <div class='blog-posts'>
+            <b:loop values='data:posts' var='post'>
+              <article class='post'>
+                <h2 class='post-title'>
+                  <a expr:href='data:post.url'><data:post.title/></a>
+                </h2>
+                <div class='post-body'>
+                  <data:post.body/>
+                </div>
+              </article>
+            </b:loop>
+          </div>
+        </b:includable>
+      </b:widget>
+    </b:section>
+  </main>
+
+  <footer class='site-footer'>
+    <div class='site-footer-inner'>
+      <data:blog.title/> · Smart farm, greenhouse automation, vertical farming, crop technology brief.
+    </div>
+  </footer>
+</body>
+</html>

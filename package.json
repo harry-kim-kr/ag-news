@@ -1,0 +1,15 @@
+{
+  "name": "ag-newsletter",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "newsletter:preview": "node src/newsletter.js --preview",
+    "newsletter:publish": "node src/newsletter.js --publish",
+    "theme:print": "node src/print-theme.js"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=20"
+  }
+}
