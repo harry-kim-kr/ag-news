@@ -3,6 +3,7 @@ name: Publish smart farm newsletter
 on:
   schedule:
     - cron: "0 22 * * *"
+    TZ: Asia/Seoul
   workflow_dispatch:
 
 jobs:
