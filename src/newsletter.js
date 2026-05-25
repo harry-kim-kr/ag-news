@@ -47,7 +47,7 @@ async function main() {
     title,
     html,
     publishedAt: now,
-    labels: ["스마트팜", "농업기술", "자동뉴스레터"]
+    labels: ["스마트팜 기술", "수직농장", "농업 자동화", "작물재배", "글로벌 농업"]
   });
 
   console.log(`Published: ${post.url}`);
