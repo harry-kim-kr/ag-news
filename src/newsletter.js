@@ -46,6 +46,7 @@ async function main() {
   const post = await publishToBlogger({
     title,
     html,
+    publishedAt: now,
     labels: ["스마트팜", "농업기술", "자동뉴스레터"]
   });
 

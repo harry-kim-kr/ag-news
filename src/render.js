@@ -1,11 +1,19 @@
 export function kstDate(date = new Date()) {
-  return new Intl.DateTimeFormat("ko-KR", {
+  const parts = new Intl.DateTimeFormat("ko-KR", {
     timeZone: "Asia/Seoul",
     year: "numeric",
     month: "2-digit",
     day: "2-digit",
     weekday: "short"
-  }).format(date);
+  }).formatToParts(date);
+
+  const values = Object.fromEntries(
+    parts
+      .filter((part) => part.type !== "literal")
+      .map((part) => [part.type, part.value])
+  );
+
+  return `${values.year}. ${values.month}. ${values.day}. (${values.weekday})`;
 }
 
 export function postTitle(date = new Date()) {

@@ -1,6 +1,6 @@
 import { config, requireBloggerConfig } from "./config.js";
 
-export async function publishToBlogger({ title, html, labels = [] }) {
+export async function publishToBlogger({ title, html, labels = [], publishedAt = new Date() }) {
   requireBloggerConfig();
   const accessToken = await refreshAccessToken();
   const url = new URL(`https://www.googleapis.com/blogger/v3/blogs/${config.blogId}/posts/`);
@@ -16,6 +16,7 @@ export async function publishToBlogger({ title, html, labels = [] }) {
       kind: "blogger#post",
       title,
       content: html,
+      published: publishedAt.toISOString(),
       labels
     })
   });
